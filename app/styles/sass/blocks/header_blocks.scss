@@ -1,0 +1,111 @@
+.wedoit-header {
+	background: linear-gradient(180deg, rgba(88, 51, 187, 0.93) 36.22%, rgba(197, 0, 238, 0.93) 100%);
+	min-height: 400px;
+	position: relative;
+	padding: 106px 0 107px;
+    @include bp(xxl) {
+        background: url(../images/dist/header_bg.png) 50% 0 no-repeat;
+        min-height: 970px;
+        padding: 215px 0 0;
+    }
+
+	&__top {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		padding: 0 20px;
+		min-height: 50px;
+		display: flex;
+		align-items: center;
+		background: rgba(58, 38, 131, 0.8);
+		backdrop-filter: blur(11px);
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        
+		&-logo {
+			min-width: 60px;
+			max-width: 60px;
+			margin-right: auto;
+
+			@include bp(xs) {
+				min-width: 74px;
+				max-width: 74px;
+			}
+		}
+
+		&-menu {
+			display: none;
+		}
+
+		&-phone {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			line-height: 1;
+			color: #fff;
+			justify-self: center;
+			text-decoration: none;
+		}
+
+		&-burger {
+			cursor: pointer;
+			margin-left: auto;
+			height: 20px;
+			width: 20px;
+			background: url("data:image/svg+xml,%3Csvg width='20' height='9' viewBox='0 0 20 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 1C0 0.447715 0.447715 0 1 0H19C19.5523 0 20 0.447715 20 1C20 1.55228 19.5523 2 19 2H1C0.447716 2 0 1.55228 0 1Z' fill='white'/%3E%3Cpath d='M3 8C3 7.44772 3.44772 7 4 7H19C19.5523 7 20 7.44772 20 8C20 8.55228 19.5523 9 19 9H4C3.44772 9 3 8.55228 3 8Z' fill='white'/%3E%3C/svg%3E%0A")
+				center no-repeat;
+		}
+	}
+
+	&__headings {
+		padding: 0 10px 39px;
+		text-align: center;
+		color: #fff;
+
+		@include bp(xs) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
+		&-top {
+			margin: 0 0 16px;
+			font-size: 35px;
+			line-height: 0.95;
+		}
+
+		&-bottom {
+			font-size: 20px;
+			line-height: 1;
+			font-weight: 250;
+			padding: 0 30px;
+		}
+	}
+
+	&__popup-btn {
+		text-align: center;
+		margin-bottom: 41px;
+
+		&-js {
+			min-width: 186px;
+		}
+	}
+
+	&__scroll-btn {
+		width: 40px;
+		height: 40px;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 50%;
+		font-size: 0;
+		background: #fff url(../images/dist/arrow.svg) 50% 50% / 13px no-repeat;
+	}
+
+	&__advantages {
+		display: none;
+	}
+}

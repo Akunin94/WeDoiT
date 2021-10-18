@@ -1,0 +1,95 @@
+$accent: #6441c0;
+$fontsize: 16px;
+$textcolor: #000;
+$lineheight: 1.65;
+$userfont: JournalSansNew, sans-serif;
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		font-display: swap;
+		src: url($furl) format("woff2");
+	}
+}
+
+@include font("JournalSansNew", normal, 250, "../fonts/JournalSansNew-Display.woff2");
+@include font("JournalSansNew", normal, 400, "../fonts/JournalSansNew.woff2");
+@include font("JournalSansNew", normal, 700, "../fonts/JournalSansNew-Bold.woff2");
+
+@mixin bp($breakpoint) {
+	@if $breakpoint == xs {
+		@media all and (min-width: 375px) {
+			@content;
+		}
+	} @else if $breakpoint == sm {
+		@media all and (min-width: 576px) {
+			@content;
+		}
+	} @else if $breakpoint == md {
+		@media all and (min-width: 768px) {
+			@content;
+		}
+	} @else if $breakpoint == xl {
+		@media all and (min-width: 1024px) {
+			@content;
+		}
+	} @else if $breakpoint == xxl {
+		@media all and (min-width: 1260px) {
+			@content;
+		}
+	} @else if $breakpoint == xxxl {
+		@media all and (min-width: 1400px) {
+			@content;
+		}
+	} @else if $breakpoint == hd {
+		@media all and (min-width: 1600px) {
+			@content;
+		}
+	} @else if $breakpoint == fullhd {
+		@media all and (min-width: 1900px) {
+			@content;
+		}
+	}
+}
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+input,
+textarea {
+	outline: none;
+	&:focus:required:invalid {
+		border-color: red;
+	}
+	&:required:valid {
+		border-color: green;
+	}
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-family: $userfont;
+	font-size: $fontsize;
+	line-height: $lineheight;
+	color: $textcolor;
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.wedoit-wrapper {
+	scroll-behavior: smooth;
+}
