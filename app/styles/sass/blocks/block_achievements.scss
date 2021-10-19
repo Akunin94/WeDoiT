@@ -1,0 +1,89 @@
+.wedoit-achievements {
+	border-radius: 20px;
+	background: #f8f7fd;
+	padding: 37px 20px 47px;
+
+	@include bp(xxl) {
+		display: block;
+		position: absolute;
+		bottom: 100%;
+		right: 10px;
+		width: 530px;
+		background: none;
+		padding: 0;
+	}
+
+	&__title {
+		color: #333;
+		font-weight: 700;
+		line-height: 1;
+		font-size: 25px;
+		margin-bottom: 8px;
+		text-align: center;
+
+		@include bp(sm) {
+			font-size: 30px;
+		}
+
+		@include bp(xxl) {
+			font-size: 40px;
+			margin-bottom: 33px;
+			max-width: 260px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: -20px;
+
+		@include bp(xxl) {
+			margin-right: -32px;
+		}
+	}
+
+	&__item {
+		min-width: calc(50% - 20px);
+		max-width: calc(50% - 20px);
+		margin: 0 20px 18px 0;
+
+		@include bp(xxl) {
+			min-width: calc(50% - 32px);
+			max-width: calc(50% - 32px);
+			margin: 0 32px 46px 0;
+		}
+	}
+
+	&__item:nth-child(4n + 1) &__header {
+		color: #ff614b;
+	}
+
+	&__item:nth-child(4n + 2) &__header {
+		color: #5234bc;
+	}
+
+	&__item:nth-child(4n + 3) &__header {
+		color: #25d8ff;
+	}
+
+	&__item:nth-child(4n + 4) &__header {
+		color: #ade915;
+	}
+
+	&__header {
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 1;
+		margin-bottom: 21px;
+
+		span {
+			font-size: 50px;
+		}
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 1;
+		color: #333;
+	}
+}

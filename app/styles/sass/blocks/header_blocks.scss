@@ -3,11 +3,17 @@
 	min-height: 400px;
 	position: relative;
 	padding: 106px 0 107px;
-    @include bp(xxl) {
-        background: url(../images/dist/header_bg.png) 50% 0 no-repeat;
-        min-height: 970px;
-        padding: 215px 0 0;
-    }
+	@include bp(xxl) {
+		background: url(../images/dist/header_bg.png) 50% 0 no-repeat;
+		min-height: 970px;
+		padding: 0;
+		display: flex;
+	}
+
+	& > .container {
+		position: relative;
+		min-height: 100%;
+	}
 
 	&__top {
 		position: absolute;
@@ -20,12 +26,17 @@
 		align-items: center;
 		background: rgba(58, 38, 131, 0.8);
 		backdrop-filter: blur(11px);
+		z-index: 1;
 
-        .container {
-            display: flex;
-            align-items: center;
-        }
-        
+		@include bp(xxl) {
+			min-height: 80px;
+		}
+
+		.container {
+			display: flex;
+			align-items: center;
+		}
+
 		&-logo {
 			min-width: 60px;
 			max-width: 60px;
@@ -35,10 +46,44 @@
 				min-width: 74px;
 				max-width: 74px;
 			}
+
+			@include bp(sm) {
+				min-width: 90px;
+				max-width: 90px;
+			}
+
+			@include bp(xxl) {
+				min-width: 166px;
+				max-width: 166px;
+			}
 		}
 
 		&-menu {
 			display: none;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 0;
+			text-align: center;
+			& > li {
+				display: inline-block;
+				vertical-align: top;
+				margin: 0 25px;
+				& > a {
+					display: block;
+					padding: 10px;
+					font-size: 20px;
+					color: #fff;
+					transition: 0.2s;
+				}
+				&:hover > a {
+					color: #ffec44;
+				}
+			}
+
+			@include bp(xxl) {
+				display: block;
+			}
 		}
 
 		&-phone {
@@ -49,6 +94,21 @@
 			color: #fff;
 			justify-self: center;
 			text-decoration: none;
+
+			@include bp(xxl) {
+				transform: none;
+				font-size: 20px;
+				line-height: 1;
+				padding: 12px 10px 13px;
+				text-align: center;
+				min-width: 202px;
+				background: linear-gradient(98.48deg, #ade915 7.95%, #ffec44 77.83%);
+				box-shadow: 0px 4px 16px rgba(255, 236, 68, 0.46);
+				border-radius: 30px;
+				color: #000;
+				position: static;
+				margin-left: auto;
+			}
 		}
 
 		&-burger {
@@ -58,6 +118,10 @@
 			width: 20px;
 			background: url("data:image/svg+xml,%3Csvg width='20' height='9' viewBox='0 0 20 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 1C0 0.447715 0.447715 0 1 0H19C19.5523 0 20 0.447715 20 1C20 1.55228 19.5523 2 19 2H1C0.447716 2 0 1.55228 0 1Z' fill='white'/%3E%3Cpath d='M3 8C3 7.44772 3.44772 7 4 7H19C19.5523 7 20 7.44772 20 8C20 8.55228 19.5523 9 19 9H4C3.44772 9 3 8.55228 3 8Z' fill='white'/%3E%3C/svg%3E%0A")
 				center no-repeat;
+
+			@include bp(xxl) {
+				display: none;
+			}
 		}
 	}
 
@@ -71,10 +135,24 @@
 			padding-right: 30px;
 		}
 
+		@include bp(xxl) {
+			position: absolute;
+			left: 0;
+			top: 215px;
+			width: 750px;
+			text-align: left;
+			padding: 0;
+		}
+
 		&-top {
 			margin: 0 0 16px;
 			font-size: 35px;
 			line-height: 0.95;
+
+			@include bp(xxl) {
+				font-size: 80px;
+				margin-bottom: 30px;
+			}
 		}
 
 		&-bottom {
@@ -82,6 +160,12 @@
 			line-height: 1;
 			font-weight: 250;
 			padding: 0 30px;
+
+			@include bp(xxl) {
+				padding: 0 100px 0 0;
+				font-size: 45px;
+				line-height: 0.8;
+			}
 		}
 	}
 
@@ -89,8 +173,18 @@
 		text-align: center;
 		margin-bottom: 41px;
 
-		&-js {
+		@include bp(xxl) {
+			position: absolute;
+			bottom: 281px;
+			left: 0;
+		}
+
+		.btn {
 			min-width: 186px;
+
+			@include bp(xxl) {
+				min-width: 203px;
+			}
 		}
 	}
 
@@ -103,9 +197,14 @@
 		border-radius: 50%;
 		font-size: 0;
 		background: #fff url(../images/dist/arrow.svg) 50% 50% / 13px no-repeat;
-	}
 
-	&__advantages {
-		display: none;
+		@include bp(xxl) {
+			position: absolute;
+			width: 61px;
+			height: 61px;
+			background-size: 23px;
+			left: 0;
+			bottom: 130px;
+		}
 	}
 }
