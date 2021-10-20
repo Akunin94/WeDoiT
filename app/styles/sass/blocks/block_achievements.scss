@@ -7,10 +7,11 @@
 		display: block;
 		position: absolute;
 		bottom: 100%;
-		right: 10px;
+		right: 20px;
 		width: 530px;
 		background: none;
 		padding: 0;
+		margin-bottom: 40px;
 	}
 
 	&__title {
@@ -26,6 +27,7 @@
 		}
 
 		@include bp(xxl) {
+			text-align: left;
 			font-size: 40px;
 			margin-bottom: 33px;
 			max-width: 260px;
@@ -71,19 +73,47 @@
 	}
 
 	&__header {
-		font-size: 30px;
 		font-weight: 700;
-		line-height: 1;
 		margin-bottom: 21px;
+		font-size: 14px;
+		line-height: 50px;
+		margin-bottom: 1px;
+
+		@include bp(xs) {
+			font-size: 15px;
+		}
+
+		@include bp(md) {
+			font-size: 30px;
+		}
 
 		span {
-			font-size: 50px;
+			font-size: 19px;
+			margin-right: 5px;
+
+			@include bp(xs) {
+				font-size: 30px;
+				margin-right: 8px;
+			}
+
+			@include bp(md) {
+				font-size: 50px;
+				margin-right: 0;
+			}
 		}
 	}
 
 	&__text {
-		font-size: 18px;
+		font-size: 12px;
 		line-height: 1;
 		color: #333;
+
+		@include bp(xs) {
+			font-size: 13px;
+		}
+
+		@include bp(xxl) {
+			font-size: 18px;
+		}
 	}
 }

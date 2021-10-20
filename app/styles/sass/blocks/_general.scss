@@ -42,6 +42,9 @@ img {
 	color: #000;
 	position: relative;
 	z-index: 1;
+	border: none;
+	cursor: pointer;
+	margin: 0;
 
 	&.btn-secondary {
 		background: radial-gradient(213.64% 946.21% at 11.82% -50.91%, #ff154d 0%, #ff614b 100%);
@@ -56,6 +59,12 @@ img {
 			box-shadow: none;
 			color: #000;
 		}
+	}
+
+	&.btn-big {
+		font-size: 20px;
+		padding-top: 17px;
+		padding-bottom: 18px;
 	}
 
 	@include bp(xxl) {
@@ -95,6 +104,10 @@ img {
 .wedoit-main {
 	margin: -65px 20px 67px;
 	position: relative;
+
+	& > .container {
+		position: relative;
+	}
 
 	@include bp(xxl) {
 		margin: -27px auto 97px;

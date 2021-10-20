@@ -64,18 +64,35 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 	color: #fff;
 }
 
-input,
-textarea {
+input.wedoit-input,
+textarea.wedoit-textarea {
 	outline: none;
-	&:focus:required:invalid {
-		border-color: red;
+	border: none;
+	background: #fff;
+	font-size: 14px;
+	color: #000;
+	border-radius: 30px;
+	text-align: center;
+	font-family: $userfont;
+	width: 100%;
+	padding: 11px 10px;
+
+	@include bp(xxl) {
+		font-size: 16px;
+		padding-top: 17px;
+		padding-bottom: 18px;
 	}
-	&:required:valid {
-		border-color: green;
+
+	&::placeholder {
+		color: #000;
 	}
 }
 
-html {
+textarea.wedoit-textarea {
+	height: 120px;
+}
+
+button html {
 	scroll-behavior: smooth;
 }
 

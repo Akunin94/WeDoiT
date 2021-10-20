@@ -15,7 +15,7 @@
 		<div class="container">
 			<!-- logo can be <div> -->
 			<a href="/" class="wedoit-header__top-logo">
-				<img src="images/dist/logo.svg" alt="WeDo iT" />
+				<img src="images/dist/logo.svg" width="166" height="33" alt="WeDo iT" />
 			</a>
 			<ul class="wedoit-header__top-menu">
 				<li>
@@ -49,7 +49,8 @@
 
 
 <main id="main" class="wedoit-main">
-	<section class="wedoit-achievements">
+	<div class="container">
+		<section class="wedoit-achievements">
 	<div class="wedoit-achievements__title">Наши достижения</div>
 	<div class="wedoit-achievements__list">
 		<div class="wedoit-achievements__item">
@@ -71,18 +72,66 @@
 	</div>
 </section>
 
-	<section class="wedoit-advantages">ADVANTAGES</section>
+		<section class="wedoit-advantages">
+	<div class="wedoit-advantages__title">Преимущества</div>
+	<div class="wedoit-advantages__list">
+		<div class="wedoit-advantages__item">
+			<div class="wedoit-advantages__item-image">
+				<img src="images/dist/advantage-icon1.svg" alt="Гибкие цены" class="wedoit-advantages__item-img" />
+			</div>
+			<div class="wedoit-advantages__item-title">Гибкие цены</div>
+		</div>
+		<div class="wedoit-advantages__item">
+			<div class="wedoit-advantages__item-image">
+				<img src="images/dist/advantage-icon2.svg" alt="Широкий спектр услуг" class="wedoit-advantages__item-img" />
+			</div>
+			<div class="wedoit-advantages__item-title">Широкий спектр услуг</div>
+		</div>
+		<div class="wedoit-advantages__item">
+			<div class="wedoit-advantages__item-image">
+				<img src="images/dist/advantage-icon3.svg" alt="Работаем в сжатые сроки" class="wedoit-advantages__item-img" />
+			</div>
+			<div class="wedoit-advantages__item-title">Работаем в сжатые сроки</div>
+		</div>
+		<div class="wedoit-advantages__item">
+			<div class="wedoit-advantages__item-image">
+				<img src="images/dist/advantage-icon4.svg" alt="Качественное исполнение" class="wedoit-advantages__item-img" />
+			</div>
+			<div class="wedoit-advantages__item-title">Качественное исполнение</div>
+		</div>
+	</div>
+	<div class="wedoit-advantages__bottom">
+		<div class="wedoit-advantages__bottom-title">Получите консультацию по телефону</div>
+		<form action="/" class="wedoit-advantages__bottom-form">
+			<div class="wedoit-advantages__bottom-field">
+				<input
+					class="wedoit-advantages__bottom-input wedoit-input"
+					type="text"
+					placeholder="+7 (___) ___-__-__"
+					name="phone"
+					required
+					class="maskme"
+				/>
+			</div>
+			<div class="wedoit-advantages__bottom-field">
+				<button class="wedoit-advantages__bottom-button btn" type="submit btn">Получить консультацию</button>
+			</div>
+			<div class="wedoit-advantages__bottom-note">Отправляя данные, я соглашаюсь на обработку моих персональных данных</div>
+		</form>
+	</div>
+</section>
 
-	<section class="wedoit-services">SERVICES</section>
+		<section class="wedoit-services">SERVICES</section>
 
-	<section class="wedoit-slider">SLIDER</section>
+		<section class="wedoit-slider">SLIDER</section>
 
-	<section class="wedoit-form">FORM</section>
+		<section class="wedoit-form">FORM</section>
 
-	<section class="wedoit-textblock">TEXTBLOCK</section>
+		<section class="wedoit-textblock">TEXTBLOCK</section>
 
-	<section class="wedoit-double">DOUBLEBLOCK</section>
+		<section class="wedoit-double">DOUBLEBLOCK</section>
 
+	</div>
 </main>
 
 <footer class="wedoit-footer">
@@ -106,7 +155,7 @@
                 <a href="tel:83831234567" class="wedoit-footer__phone">8-383-123-45-67</a>
                 <a href="mailto:info@wedoit.ru" class="wedoit-footer__email">info@wedoit.ru</a>
                 <div class="wedoit-footer__popup-btn">
-                    <div class="wedoit-popup btn btn-secondary">Заказать звонок</div>
+                    <div class="wedoit-popup btn btn-secondary btn-big">Заказать звонок</div>
                 </div>
             </div>
         </div>
