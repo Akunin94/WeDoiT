@@ -4,6 +4,10 @@
 	border-radius: 20px;
 	margin: -40px 0 40px;
 
+	@include bp(xl) {
+		margin-bottom: 70px;
+	}
+
 	&__title {
 		padding: 61px 20px 47px;
 		font-size: 30px;
