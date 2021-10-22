@@ -80,6 +80,8 @@
 			@include bp(xxl) {
 				display: block;
 				border-radius: 30px;
+				width: auto !important;
+				height: auto !important;
 			}
 		}
 
