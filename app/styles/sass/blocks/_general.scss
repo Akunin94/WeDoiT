@@ -26,6 +26,13 @@ img {
 	width: 100%;
 }
 
+p:first-child {
+	margin-top: 0;
+}
+p:first-child {
+	margin-bottom: 0;
+}
+
 .btn {
 	display: inline-block;
 	vertical-align: top;
