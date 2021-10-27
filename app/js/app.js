@@ -40,4 +40,30 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 	// REVIEWS SLIDER -----
+
+	// BURGER +++++
+	$(document).on("click", ".wedoit-header__top-burger", function () {
+		$("html, body").addClass("wedoit-overflowhidden");
+		$(".wedoit-header__popup").addClass("active");
+	});
+	$(document).on("click", ".wedoit-header__popup-close", function () {
+		$("html, body").removeClass("wedoit-overflowhidden");
+		$(".wedoit-header__popup").removeClass("active");
+	});
+	// BURGER -----
+
+	// ANCHOR MENU +++++
+	$(".wedoit-header__top-menu a, .wedoit-header__scroll-btn, .wedoit-header__popup-menu a, .wedoit-footer__menu a").on('click', function (event) {
+		let position = $(this.hash).offset().top;
+		if ($('body').width() >= 1340) {
+			position = position - 110;
+		}
+
+		$('html, body').animate({scrollTop: position}, 800);
+		$('.wedoit-header__popup').removeClass('active');
+		$("html, body").removeClass("wedoit-overflowhidden");
+
+		event.preventDefault ();
+	});
+	// ANCHOR MENU -----
 });

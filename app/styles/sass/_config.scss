@@ -92,8 +92,9 @@ textarea.wedoit-textarea {
 	height: 120px;
 }
 
-button html {
-	scroll-behavior: smooth;
+html,
+body {
+	height: 100%;
 }
 
 body {
