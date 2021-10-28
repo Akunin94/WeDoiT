@@ -1,2 +1,122 @@
 .wedoit-slider {
+	margin: 0 -18px 40px;
+
+	@include bp(xxl) {
+		margin: 0 0 20px;
+		position: relative;
+		height: 850px;
+	}
+
+	&__top {
+		margin-bottom: 23px;
+
+		@include bp(xxl) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	&__title {
+		text-align: center;
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 1;
+
+		@include bp(xxl) {
+			font-size: 50px;
+		}
+	}
+
+	&__link {
+		font-size: 20px;
+		line-height: 1;
+		color: #0495d3;
+		text-decoration: none;
+		display: none;
+		&:hover {
+			text-decoration: underline;
+		}
+
+		@include bp(xxl) {
+			display: block;
+		}
+	}
+
+	&__pc {
+		position: absolute;
+		height: 800px;
+		left: 0;
+		bottom: 0;
+		padding: 50px 30px 0 140px;
+
+		&:after {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			content: "";
+			background: url(../images/dist/pc-frame.png) 0 100% / 100% no-repeat;
+			pointer-events: none;
+		}
+
+		&-item {
+			position: relative;
+			z-index: 1;
+		}
+
+		.slick-list {
+			z-index: 1;
+		}
+	}
+
+	&__phone {
+		width: 316px;
+		height: 512px;
+		margin: 0 auto 20px;
+		padding: 10px 12px 0;
+		position: relative;
+		z-index: 2;
+
+		@include bp(xxl) {
+			position: absolute !important;
+			right: 0;
+			bottom: 0;
+			margin: 0;
+		}
+
+		&:after {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			content: "";
+			background: url(../images/dist/phone-frame.png) 50% 0 / 100% no-repeat;
+			pointer-events: none;
+		}
+
+		&-item {
+			text-align: center;
+			border-radius: 30px;
+			overflow: hidden;
+		}
+	}
+
+	.btn {
+		display: block;
+		margin-left: 16px;
+		margin-right: 16px;
+
+		@include bp(xs) {
+			max-width: 316px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@include bp(xxl) {
+			display: none;
+		}
+	}
 }

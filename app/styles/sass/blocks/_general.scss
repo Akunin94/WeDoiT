@@ -52,6 +52,7 @@ p:first-child {
 	border: none;
 	cursor: pointer;
 	margin: 0;
+	text-decoration: none;
 
 	&.btn-secondary {
 		background: radial-gradient(213.64% 946.21% at 11.82% -50.91%, #ff154d 0%, #ff614b 100%);
@@ -68,7 +69,7 @@ p:first-child {
 		}
 	}
 
-	&.btn-big {
+	&--big {
 		font-size: 20px;
 		padding-top: 17px;
 		padding-bottom: 18px;
