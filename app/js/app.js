@@ -109,7 +109,7 @@ $(function () {
 	$(".maskme").mask("+7 (999) 999-99-99");
 	// PHONE MASK -----
 
-	// PHONE SLIDER +++++
+	// OUR WORKS SLIDER +++++
 	$(".wedoit-slider__phone").each(function () {
 		if ($(this).find(".wedoit-slider__phone-item").length > 1) {
 			$(this).slick({
@@ -128,7 +128,7 @@ $(function () {
 		if ($(this).find(".wedoit-slider__pc-item").length > 1) {
 			$(this).slick({
 				dots: false,
-				arrows: false,
+				arrows: true,
 				autoplay: true,
 				autoplaySpeed: 7000,
 				infinite: true,
@@ -138,5 +138,5 @@ $(function () {
 			});
 		}
 	});
-	// PHONE SLIDER -----
+	// OUR WORKS SLIDER -----
 });

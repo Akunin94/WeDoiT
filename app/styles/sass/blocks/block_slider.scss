@@ -49,9 +49,15 @@
 		left: 0;
 		bottom: 0;
 		display: none !important;
+		width: 1280px;
 
 		@include bp(xxl) {
 			display: block !important;
+			left: -30px;
+		}
+
+		@media all and (min-width: 1300px) {
+			left: 0;
 		}
 
 		&:after {
@@ -61,7 +67,7 @@
 			top: 0;
 			bottom: 0;
 			content: "";
-			background: url(../images/dist/pc-frame.png) 0 100% / 100% no-repeat;
+			background: url(../images/dist/pc-frame.png) 0 100% / 1280px no-repeat;
 			pointer-events: none;
 		}
 
@@ -76,21 +82,72 @@
 		.slick-list {
 			z-index: 1;
 		}
+
+		.slick-arrow {
+			position: absolute;
+			z-index: 1;
+			width: 61px;
+			height: 61px;
+			font-size: 0;
+			cursor: pointer;
+			border-radius: 50%;
+			left: 573px;
+			bottom: 35px;
+			border: none;
+			padding: 0;
+			transition: 0.2s;
+			background: #fff
+				url("data:image/svg+xml,%3Csvg width='12' height='23' viewBox='0 0 12 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.38 1.74001L1.16872 11.3972L10.38 21.26' stroke='%23FF154D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+				45% 50% no-repeat;
+
+			&:hover {
+				opacity: 0.8;
+			}
+
+			&.slick-next {
+				transform: rotate(180deg);
+				margin-left: 70px;
+			}
+		}
 	}
 
 	&__phone {
-		width: 316px;
-		height: 512px;
+		width: 312px;
+		height: 536px;
 		margin: 0 auto 20px;
 		padding: 10px 12px 0;
 		position: relative;
 		z-index: 2;
 
+		&--big {
+			display: none;
+			@include bp(xxl) {
+				display: block !important;
+			}
+		}
+
 		@include bp(xxl) {
 			position: absolute !important;
-			right: 0;
+			right: -1px;
 			bottom: 0;
 			margin: 0;
+			width: 272px;
+			padding: 0;
+			display: none;
+		}
+
+		&:before {
+			@include bp(xxl) {
+				position: absolute;
+				left: 4px;
+				right: 3px;
+				top: -4px;
+				bottom: -1px;
+				content: "";
+				border: 7px solid #e2e2e2;
+				pointer-events: none;
+				border-radius: 42px;
+			}
 		}
 
 		&:after {
@@ -102,12 +159,21 @@
 			content: "";
 			background: url(../images/dist/phone-frame.png) 50% 0 / 100% no-repeat;
 			pointer-events: none;
+
+			@include bp(xxl) {
+				background-image: url(../images/dist/phone-frame4.png);
+			}
 		}
 
 		&-item {
 			text-align: center;
 			border-radius: 30px;
 			overflow: hidden;
+			display: block;
+
+			@include bp(xxl) {
+				margin: 5px 16px 0 17px;
+			}
 		}
 	}
 

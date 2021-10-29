@@ -191,8 +191,38 @@
 				box-shadow: 0px 4px 16px rgba(255, 236, 68, 0.46);
 				border-radius: 30px;
 				color: #000;
-				position: static;
+				position: relative;
+				left: auto;
 				margin-left: auto;
+				transition: 0.12s;
+				z-index: 1;
+
+				&:before {
+					z-index: -1;
+					position: absolute;
+					content: "";
+					left: 51%;
+					top: 51%;
+					width: 0;
+					height: 0;
+					opacity: 0;
+					transition: 0.12s;
+					background: radial-gradient(213.64% 946.21% at 11.82% -50.91%, #ff154d 0%, #ff614b 100%);
+					border-radius: 30px;
+				}
+
+				&:hover {
+					box-shadow: none;
+					color: #fff;
+
+					&:before {
+						opacity: 1;
+						left: -1px;
+						top: -1px;
+						width: calc(100% + 2px);
+						height: calc(100% + 2px);
+					}
+				}
 			}
 		}
 

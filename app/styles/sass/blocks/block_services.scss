@@ -63,9 +63,30 @@
 			margin-bottom: 40px;
 			padding: 0 0 51px;
 			background: #f8f8f8 !important;
+			position: relative;
+			z-index: 1;
+
+			&:before {
+				z-index: -1;
+				position: absolute;
+				content: "";
+				left: 51%;
+				top: 51%;
+				width: 0;
+				height: 0;
+				opacity: 0;
+				transition: 0.12s;
+				background: linear-gradient(180deg, #5234bc 0%, #9023b0 100%) !important;
+			}
 
 			&:hover {
-				background: linear-gradient(180deg, #5234bc 0%, #9023b0 100%) !important;
+				&:before {
+					opacity: 1;
+					left: -1px;
+					top: -1px;
+					width: calc(100% + 2px);
+					height: calc(100% + 2px);
+				}
 			}
 
 			&:hover &-title,
