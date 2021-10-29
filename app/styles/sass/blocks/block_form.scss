@@ -7,7 +7,7 @@
 	margin-bottom: 38px;
 
 	@include bp(xl) {
-		padding: 55px 47px 55px 77px;
+		padding: 55px 61px 55px 77px;
 		display: flex;
 		margin-bottom: 68px;
 	}
@@ -79,6 +79,10 @@
 
 			@include bp(xl) {
 				width: 287px;
+			}
+
+			&:hover {
+				box-shadow: 0 0 32px rgba(255, 236, 68, 1);
 			}
 		}
 	}

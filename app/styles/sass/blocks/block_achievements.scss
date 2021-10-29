@@ -3,15 +3,18 @@
 	background: #f8f7fd;
 	padding: 37px 20px 47px;
 
+	@include bp(md) {
+		padding: 37px 30px 60px;
+	}
+
 	@include bp(xxl) {
 		display: block;
 		position: absolute;
 		bottom: 100%;
-		right: 20px;
+		right: 50px;
 		width: 530px;
 		background: none;
 		padding: 0;
-		margin-bottom: 40px;
 	}
 
 	&__title {
@@ -24,6 +27,11 @@
 
 		@include bp(sm) {
 			font-size: 30px;
+		}
+
+		@include bp(md) {
+			margin-bottom: 28px;
+			font-size: 35px;
 		}
 
 		@include bp(xxl) {
@@ -39,7 +47,7 @@
 		flex-wrap: wrap;
 		margin-right: -20px;
 
-		@include bp(xxl) {
+		@include bp(md) {
 			margin-right: -32px;
 		}
 	}
@@ -49,10 +57,14 @@
 		max-width: calc(50% - 20px);
 		margin: 0 20px 18px 0;
 
-		@include bp(xxl) {
+		@include bp(md) {
 			min-width: calc(50% - 32px);
 			max-width: calc(50% - 32px);
-			margin: 0 32px 46px 0;
+			margin-right: 32px;
+		}
+
+		@include bp(xxl) {
+			margin-bottom: 46px;
 		}
 	}
 
@@ -85,6 +97,10 @@
 
 		@include bp(md) {
 			font-size: 30px;
+		}
+
+		@include bp(xxl) {
+			margin-bottom: 21px;
 		}
 
 		span {

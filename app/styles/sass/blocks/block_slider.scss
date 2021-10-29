@@ -48,7 +48,11 @@
 		height: 800px;
 		left: 0;
 		bottom: 0;
-		padding: 50px 30px 0 140px;
+		display: none !important;
+
+		@include bp(xxl) {
+			display: block !important;
+		}
 
 		&:after {
 			position: absolute;
@@ -63,7 +67,10 @@
 
 		&-item {
 			position: relative;
+			display: block;
 			z-index: 1;
+			margin: 50px 30px 0 140px;
+			width: 1110px;
 		}
 
 		.slick-list {
