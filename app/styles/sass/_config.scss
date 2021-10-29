@@ -37,7 +37,7 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 			@content;
 		}
 	} @else if $breakpoint == xxl {
-		@media all and (min-width: 1340px) {
+		@media all and (min-width: 1260px) {
 			@content;
 		}
 	} @else if $breakpoint == xxxl {
