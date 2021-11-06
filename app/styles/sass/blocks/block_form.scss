@@ -30,6 +30,14 @@
 		@include bp(xxl) {
 			margin-right: 60px;
 		}
+
+		&--success {
+			margin: 0;
+			min-width: 100%;
+			max-width: 100%;
+			text-align: center;
+			display: none;
+		}
 	}
 
 	&__form {

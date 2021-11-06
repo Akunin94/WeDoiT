@@ -139,4 +139,46 @@ $(function () {
 		}
 	});
 	// OUR WORKS SLIDER -----
+
+	// FORMS +++++
+	$('.wedoit-popup-form__form, .wedoit-double__form-form').on('submit', function(){
+		let $this = $(this),
+			$success_block = $this.next(),
+			url = $this.data('action'),
+			formData = $this.serialize();
+
+		formAjax(url, formData, $this, $success_block)
+
+		return false;
+	});
+	$('.wedoit-advantages__bottom-form, .wedoit-form__form').on('submit', function(){
+		let $this = $(this),
+			$success_block = $this.prev(),
+			$hide_block = $this.prev().prev(),
+			url = $this.data('action'),
+			formData = $this.serialize();
+
+		formAjax(url, formData, $this, $success_block, $hide_block)
+
+		return false;
+	});
+
+	function formAjax(url, formData, $form, $success_block, $hide_block) {
+		$.ajax({
+			type: 'post',
+			url,
+			data: formData,
+			success: function(data) {
+				$form.hide();
+				$success_block.show();
+				if ($hide_block) {
+					$hide_block.hide();
+				}
+			},
+			error: function(data) {
+				console.error(data)
+			}
+		});
+	}
+	// FORMS -----
 });

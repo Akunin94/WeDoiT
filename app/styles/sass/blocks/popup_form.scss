@@ -81,6 +81,11 @@
 		@include bp(xs) {
 			font-size: 30px;
 		}
+
+		&--success {
+			margin-bottom: 0;
+			display: none;
+		}
 	}
 
 	&__form {

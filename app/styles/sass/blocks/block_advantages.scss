@@ -116,6 +116,15 @@
 				max-width: 464px;
 				font-size: 40px;
 			}
+
+			&--success {
+				margin: 0;
+				display: none;
+				min-width: 100%;
+				max-width: 100%;
+				margin: 0;
+				text-align: center;
+			}
 		}
 
 		&-form {
