@@ -69,7 +69,11 @@
 	}
 
 	&__item:nth-child(4n + 1) &__header {
-		color: #ff614b;
+		color: #5234bc;
+
+		@include bp(md) {
+			color: #ff614b;
+		}
 	}
 
 	&__item:nth-child(4n + 2) &__header {
@@ -77,11 +81,19 @@
 	}
 
 	&__item:nth-child(4n + 3) &__header {
-		color: #25d8ff;
+		color: #5234bc;
+
+		@include bp(md) {
+			color: #25d8ff;
+		}
 	}
 
 	&__item:nth-child(4n + 4) &__header {
-		color: #ade915;
+		color: #5234bc;
+
+		@include bp(md) {
+			color: #ade915;
+		}
 	}
 
 	&__header {
